@@ -10,6 +10,9 @@ namespace WordPress\L18N;
 
 WordPressIncluder::get('wp-includes/pomo/po.php');
 
+use \Translation_Entry;
+use \PO;
+
 class PotExtMeta {
 
 	var $headers = array(
