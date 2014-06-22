@@ -8,7 +8,7 @@ namespace WordPress\L18N;
  * @subpackage tools
  */
 
-WordPressIncluder::include('wp-includes/pomo/po.php');
+WordPressIncluder::get('wp-includes/pomo/po.php');
 
 class PotExtMeta {
 

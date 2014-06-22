@@ -15,7 +15,7 @@ class WordPressIncluder
 		return __DIR__ . '/../../../../wordpress';
 	}
 
-	static function include($wordPressFile)
+	static function get($wordPressFile)
 	{
 		if (!file_exists(self::getWPPath()))
 			throw new \Exception('WordPress could not be found where we thought it should be at: ' . realpath(dirname(self::getWPPath()) . DIRECTORY_SEPARATOR . basename(self::getWPPath())));

@@ -1,8 +1,8 @@
 <?php
 namespace WordPress\L18N;
 
-WordPressIncluder::include('wp-includes/pomo/entry.php');
-WordPressIncluder::include('wp-includes/pomo/translations.php');
+WordPressIncluder::get('wp-includes/pomo/entry.php');
+WordPressIncluder::get('wp-includes/pomo/translations.php');
 
 /**
  * Responsible for extracting translatable strings from PHP source files

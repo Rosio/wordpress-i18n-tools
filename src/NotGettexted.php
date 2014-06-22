@@ -13,8 +13,8 @@ if (!defined('T_ML_COMMENT'))
 else
     define('T_DOC_COMMENT', T_ML_COMMENT);
 
-WordPressIncluder::include('wp-includes/pomo/po.php');
-WordPressIncluder::include('wp-includes/pomo/mo.php');
+WordPressIncluder::get('wp-includes/pomo/po.php');
+WordPressIncluder::get('wp-includes/pomo/mo.php');
 
 class NotGettexted {
 	var $enable_logging = false;
