@@ -1,0 +1,14 @@
+{
+    "name": "rosio/wordpress-l18n-tools",
+    "description": "A rewrite of WordPress's I18N tools into a composer friendly format.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ben",
+            "email": "ben@ros.io"
+        }
+    ],
+    "require": {
+
+    }
+}
