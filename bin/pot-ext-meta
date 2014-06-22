@@ -2,9 +2,12 @@
 <?php
 namespace WordPress\L18N;
 
-if (!file_exists(__DIR__ . '/../../../../autoload.php'))
+if (file_exists(__DIR__ . '/../../../../autoload.php'))
+	require __DIR__ . '/../../../../autoload.php';
+else if (file_exists(__DIR__ . '/../../autoload.php'))
+	require __DIR__ . '/../../autoload.php';
+else
 	exit('Cannot find your vendor autoloader.');
-require __DIR__ . '/../../../../autoload.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
