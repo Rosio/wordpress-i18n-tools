@@ -1,6 +1,9 @@
 <?php
 namespace WordPress\L18N;
 
+WordPressIncluder::get('wp-includes/pomo/po.php');
+use PO;
+
 class MakePOT {
 	var $max_header_lines = 30;
 
