@@ -1,6 +1,11 @@
 #!/usr/bin/env php
 <?php
 namespace WordPress\L18N;
+
+if (!file_exists(__DIR__ . '/../../../../autoload.php'))
+	exit('Cannot find your vendor autoloader.');
+require __DIR__ . '/../../../../autoload.php';
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
