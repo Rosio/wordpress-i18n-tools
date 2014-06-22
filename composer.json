@@ -8,7 +8,18 @@
             "email": "ben@ros.io"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "WordPress\\L18N\\": "src/"
+        }
+    },
     "require": {
-
-    }
+        "johnpbloch/wordpress": "*"
+    },
+    "bin": [
+        "bin/add-textdomain",
+        "bin/makepot",
+        "bin/not-gettexted",
+        "bin/pot-ext-meta",
+    ]
 }
