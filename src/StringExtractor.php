@@ -4,6 +4,9 @@ namespace WordPress\L18N;
 WordPressIncluder::get('wp-includes/pomo/entry.php');
 WordPressIncluder::get('wp-includes/pomo/translations.php');
 
+use Translations;
+use Translation_Entry;
+
 /**
  * Responsible for extracting translatable strings from PHP source files
  * in the form of Translations instances
