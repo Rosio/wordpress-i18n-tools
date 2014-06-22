@@ -7,8 +7,7 @@ if (file_exists(__DIR__ . '/../../../autoload.php'))
 else
 	exit('Cannot find your vendor autoloader.');
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+date_default_timezone_set('UTC');
 
 $not_gettexted = new NotGettexted;
 $not_gettexted->cli();
