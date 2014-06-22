@@ -20,6 +20,6 @@
         "bin/add-textdomain",
         "bin/makepot",
         "bin/not-gettexted",
-        "bin/pot-ext-meta",
+        "bin/pot-ext-meta"
     ]
 }
