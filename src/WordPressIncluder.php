@@ -3,28 +3,28 @@ namespace WordPress\L18N;
 
 class WordPressIncluder
 {
-	static private function getWPPath ()
-	{
-		// The below is very gross, but it is the best solution
-		// I can think of short of including a WordPress with
-		// autoloading via classmap.
-		
-		// Up four, src/package directory/vendor directory/dependencies directory.
-		// WordPress is installed in project root, under the directory name 'wordpress'
-		// by default.
-		return __DIR__ . '/../../../../wordpress';
-	}
+    private static function getWPPath()
+    {
+        // The below is very gross, but it is the best solution
+        // I can think of short of including a WordPress with
+        // autoloading via classmap.
 
-	static function get($wordPressFile)
-	{
-		if (!file_exists(self::getWPPath()))
-			throw new \Exception('WordPress could not be found where we thought it should be at: ' . realpath(dirname(self::getWPPath()) . DIRECTORY_SEPARATOR . basename(self::getWPPath())));
+        // Up four, src/package directory/vendor directory/dependencies directory.
+        // WordPress is installed in project root, under the directory name 'wordpress'
+        // by default.
+        return __DIR__ . '/../../../../wordpress';
+    }
 
-		$path = realpath(self::getWPPath() . DIRECTORY_SEPARATOR . ltrim($wordPressFile, DIRECTORY_SEPARATOR));
+    public static function get($wordPressFile)
+    {
+        if (!file_exists(self::getWPPath()))
+            throw new \Exception('WordPress could not be found where we thought it should be at: ' . realpath(dirname(self::getWPPath()) . DIRECTORY_SEPARATOR . basename(self::getWPPath())));
 
-		if ($path === false)
-			throw new \Exception('File ' . $wordPressFile . ' could not be found.');
+        $path = realpath(self::getWPPath() . DIRECTORY_SEPARATOR . ltrim($wordPressFile, DIRECTORY_SEPARATOR));
 
-		return require $path;
-	}
+        if ($path === false)
+            throw new \Exception('File ' . $wordPressFile . ' could not be found.');
+
+        return require $path;
+    }
 }
