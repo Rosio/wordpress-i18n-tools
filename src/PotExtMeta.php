@@ -8,7 +8,8 @@ namespace WordPress\L18N;
  * @subpackage tools
  */
 
-WordPressIncluder::get('wp-includes/pomo/po.php');
+if ( !class_exists( 'PO' ) )
+	WordPressIncluder::get('wp-includes/pomo/po.php');
 
 use \Translation_Entry;
 use \PO;
